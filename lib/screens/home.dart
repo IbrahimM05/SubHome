@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sub_home/screens/search_results.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -29,7 +30,12 @@ class HomeScreen extends StatelessWidget {
               border: InputBorder.none,
               contentPadding: EdgeInsets.all(16),
             ),
-            onSubmitted: (value) {},
+            onSubmitted: (value) {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => SearchResults()),
+              );
+            },
           ),
         ),
       ),
